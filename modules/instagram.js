@@ -4,7 +4,7 @@ import data1 from "../json-files/instagram/top/Aboriginal_top_hashtag.json" asse
 
 import data2 from "../json-files/instagram/top/MMIWG_top_hashtag.json" assert { type: "json" };
 import data3 from "../json-files/instagram/top/MMIW_top_hashtag.json" assert { type: "json" };
-import data4 from "../json-files/instagram/top/firstnations_top_hashtag.json" assert { type: "json" };
+import data4 from "../json-files/instagram/top/FirstNations_top_hashtag.json" assert { type: "json" };
 import data5 from "../json-files/instagram/top/indigenouspeople_top_hashtag.json" assert { type: "json" };
 import data6 from "../json-files/instagram/top/IndigenousPeoplesDay_top_hashtag.json" assert { type: "json" };
 import data7 from "../json-files/instagram/top/indigenouswoman_top_hashtag.json" assert { type: "json" };
