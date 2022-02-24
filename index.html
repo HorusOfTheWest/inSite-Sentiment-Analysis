@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Data Analysis</title>
+    <script src="node_modules/chart.js/dist/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="sentimood.js"></script>
+    <script defer type="module" src="app.js"></script>
+  </head>
+  <body>
+    <div class="document-body--div">
+      <div class="div--nav-bar">
+        <nav class="nav-bar">
+          <p>inSite</p>
+          <p>|</p>
+          <a>Gather</a>
+          <a>Analyze</a>
+          <a>About</a>
+        </nav>
+      </div>
+      <div class="div--chart hidden">
+        <div class="div--chart-nav">
+          <p>Chart Your Data</p>
+          <a class="btn-close--div--chart">✕</a>
+        </div>
+        <div class="div--chart-display">
+          <div class="div--chart-container"></div>
+        </div>
+        <div class="div--chart-config">
+          <div class="placeholder-wip"><div>Work In Progress</div></div>
+          <p class="header--chart-config">Configure Chart Data</p>
+          <div class="div--chart-config-content"></div>
+          <p class="footer--chart-config">Generate Chart</p>
+        </div>
+      </div>
+      <div class="modal-display--div">
+        <div class="div--selection-menu">
+          <p class="box--header-selector">
+            <a href="#" id="link-analyze" class="active">Analyze</a>/<a
+              href="#"
+              id="link-compare"
+              class=""
+              >Compare</a
+            >
+          </p>
+          <div class="div--compare hidden">
+            <button class="btn-compare">Run Sentiment Comparison</button>
+          </div>
+          <div class="div--analyze">
+            <div>
+              <a href="#" class="header-data-select" name="tiktok">TikTok</a>
+              <hr />
+            </div>
+            <div class="div--data-sample-selector" id="div-datalist-tiktok">
+              <label>Select Data Sample(s):</label>
+              <div class="div--data-samples">
+                <div>
+                  <input
+                    type="checkbox"
+                    class="checkbox-all"
+                    value="All"
+                    id="All"
+                  /><label for="All">All</label>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a href="#" class="header-data-select" name="instagram"
+                >Instagram</a
+              >
+              <hr />
+            </div>
+            <div
+              class="div--data-sample-selector hidden"
+              id="div-datalist-instagram"
+            >
+              <label>Select Data Sample(s):</label>
+              <div class="div--data-samples">
+                <div>
+                  <input
+                    type="checkbox"
+                    class="checkbox-all"
+                    value="All"
+                    id="All"
+                  /><label for="All">All</label>
+                </div>
+              </div>
+            </div>
+            <button class="run-btn">Run Sentiment Analysis</button>
+          </div>
+        </div>
+        <div class="div--data-readout">
+          <p class="header--sentiment-analysis">
+            Sentiment Analysis <a class="link-see-graph">📈</a>
+          </p>
+          <div class="analysis-readout">
+            <div class="div--data-readout--padding">
+              <a>Post Count: <a id="readout--post-count"></a></a><br />
+              <div class="margin-top-sm">
+                <a class="margin-top-sm">Total Score: </a><br />
+                <ul class="readout-list">
+                  <li>Absolute: <a id="readout--total-abs"></a></li>
+                  <li>Positive: <a id="readout--total-pos"></a></li>
+                  <li>Negtive: <a id="readout--total-neg"></a></li>
+
+                  <li>
+                    Comparative:
+                    <a id="readout--total-comp"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="margin-top-sm">
+                <a>Per Post Analysis: </a><br />
+                <ul class="readout-list">
+                  <li>Average: <a id="readout--avg-abs"></a></li>
+
+                  <li>SD: <a id="readout--avg-sd"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="comparison-readout hidden">
+            <div
+              class="div--data-readout--padding"
+              id="comp-readout-padding"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
