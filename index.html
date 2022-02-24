@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Data Analysis</title>
-    
+    <script src="node_modules/chart.js/dist/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="sentimood.js"></script>
     <script defer type="module" src="app.js"></script>
@@ -22,19 +22,21 @@
           <a>About</a>
         </nav>
       </div>
-      <div class="div--chart hidden">
-        <div class="div--chart-nav">
-          <p>Chart Your Data</p>
-          <a class="btn-close--div--chart">✕</a>
-        </div>
-        <div class="div--chart-display">
-          <div class="div--chart-container"></div>
-        </div>
-        <div class="div--chart-config">
-          <div class="placeholder-wip"><div>Work In Progress</div></div>
-          <p class="header--chart-config">Configure Chart Data</p>
-          <div class="div--chart-config-content"></div>
-          <p class="footer--chart-config">Generate Chart</p>
+      <div class="div--chart-grid">
+        <div class="div--chart">
+          <div class="div--chart-nav">
+            <p>Chart Your Data</p>
+            <a class="btn-close--div--chart">✕</a>
+          </div>
+          <div class="div--chart-display">
+            <div class="div--chart-container"></div>
+          </div>
+          <div class="div--chart-config">
+            <div class="placeholder-wip"><div>Work In Progress</div></div>
+            <p class="header--chart-config">Configure Chart Data</p>
+            <div class="div--chart-config-content"></div>
+            <p class="footer--chart-config">Generate Chart</p>
+          </div>
         </div>
       </div>
       <div class="modal-display--div">
@@ -123,12 +125,7 @@
               </div>
             </div>
           </div>
-          <div class="comparison-readout hidden">
-            <div
-              class="div--data-readout--padding"
-              id="comp-readout-padding"
-            ></div>
-          </div>
+          <div class="comparison-readout hidden"></div>
         </div>
       </div>
     </div>
