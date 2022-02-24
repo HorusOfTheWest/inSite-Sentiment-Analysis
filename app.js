@@ -34,6 +34,7 @@ const returnCaption = (post) => {
 
 // HTML resources
 
+
 const html = {
   // HTML Code
 
@@ -129,9 +130,11 @@ const html = {
 
   readout(number) {
     return `<div class="comp-readout-subdiv comp-readout-subdiv-${number}">
-    <div>
-      <a class="bold">Group ${number}</a><br />
-      <a>Posts: </a><a id="readout-${number}--post-count"></a><br />
+    <a class="bold">Group ${number}</a><br />
+    <a>Posts: </a><a id="readout-${number}--post-count"></a><br />
+    <div class="margin-top-sm">
+      
+      
       <a>Total Score: </a><br />
       <a
         >&nbsp;&nbsp;&nbsp;Absolute:
@@ -142,7 +145,7 @@ const html = {
         <a id="readout-${number}--total-comp"></a
       ></a>
     </div>
-    <div>
+    <div class="margin-top-sm">
       <a>Per Post Analysis: </a><br />
       <a
         >&nbsp;&nbsp;&nbsp;Average:
